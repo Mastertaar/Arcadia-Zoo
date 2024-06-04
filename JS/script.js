@@ -36,14 +36,19 @@ const swiper = new Swiper(".gallery-slider", {
   }
 })
 
+
+// API Fetch
 document.addEventListener('DOMContentLoaded', function () {
-  loadHTMLData([])
+  fetch('http://localhost:5000/getAll')
+  .then(response => response.json())
+  .then(data => console.log(data));
+  loadHTMLData();
 });
 
 function loadHTMLData(data) {
   const nodata = document.querySelector('.login-form');
   
-  if (data.length === 0) {
-    table.innerHTML = "<tr><td class='box2'>No Data</td></tr>";
+  if (data === null) {
+    nodata.innerHTML = "<p>No Data</p>";
   }
 }
