@@ -1,5 +1,4 @@
 const sql = require ('mysql');
-let instance = null;
 const dotenv = require('dotenv');
 dotenv.config();
 const connection = sql.createConnection({
