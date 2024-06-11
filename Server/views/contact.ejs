@@ -1,0 +1,30 @@
+<%- include('../public/css/style'); %>
+
+<!-- contact -->
+
+<section class="contact" id="contact">
+
+  <h2 class="heading">contact</h2>
+
+  <form action="send" method="post">
+
+    <div class="inputBox">
+      <input id="name" name="name" type="text" placeholder="nom complet">
+      <input id="email" name="email" type="email" placeholder="email">
+    </div>
+
+    <div class="inputBox">
+      <input id="phone" name="phone" type="number" placeholder="téléphone">
+      <input id="subject" name="subject" type="text" placeholder="objet">
+    </div>
+
+    <textarea id="message" name="message" id="textarea" cols="30" rows="10" placeholder="message"></textarea>
+
+    <button type="submit" id="to" name="to" value="Send" class="btn">Envoyer</button>
+
+  </form>
+
+</section>
+
+
+<!-- end -->
