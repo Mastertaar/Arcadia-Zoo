@@ -1,2 +1,4 @@
 *.log
 index copy.ejs
+mail-api.js
+sendMail2.js

@@ -205,25 +205,25 @@
 
 <section class="contact" id="contact">
 
-<h2 class="heading">contact</h2>
+  <h2 class="heading">contact</h2>
 
-<form action="/send_email" method="post">
+  <form action="/send_email" method="post">
 
-  <div class="inputBox">
-    <input id="name"type="text" placeholder="nom complet">
-    <input id="email" type="email" placeholder="email">
-  </div>
+    <div class="inputBox">
+      <input id="name" name="name" type="text" placeholder="nom complet">
+      <input id="email" name="email" type="email" placeholder="email">
+    </div>
 
-  <div class="inputBox">
-    <input id="phone" type="number" placeholder="téléphone">
-    <input id="mailSubject" type="text" placeholder="objet">
-  </div>
+    <div class="inputBox">
+      <input id="phone" name="phone" type="number" placeholder="téléphone">
+      <input id="subject" name="subject" type="text" placeholder="objet">
+    </div>
 
-  <textarea id="message" name="textarea" id="textarea" cols="30" rows="10" placeholder="message"></textarea>
+    <textarea id="message" name="message" id="textarea" cols="30" rows="10" placeholder="message"></textarea>
 
-  <button type="submit"  value="Send" class="btn">Envoyer</button>
+    <button type="submit" id="to" name="to" value="Send" class="btn">Envoyer</button>
 
-</form>
+  </form>
 
 </section>
 
