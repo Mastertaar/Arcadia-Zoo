@@ -46,4 +46,4 @@ const sendMail = async (transporter, mailOptions) => {
   }
 }
 
-sendMail(transporter, mailOptions);
+sendMail(transporter, mailOptions); //type in console "node .\sendMail.js" to send an email
