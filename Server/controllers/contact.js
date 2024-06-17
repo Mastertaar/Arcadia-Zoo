@@ -80,7 +80,7 @@ app.post('/send', (req, res) => {
     } else {
       console.log('Message sent: %s', info.messageId);
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-      res.render('/', alert('Email has been sent'));
+      res.redirect('/');
     }
     
   });
