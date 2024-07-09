@@ -25,12 +25,12 @@ router.get("/login", (req, res) => {
   res.sendFile("login.html", {root:"./public"});
 })
 
-/*router.get("/elephants", (req, res) => {
+router.get("/elephants", (req, res) => {
   res.sendFile("elephants.html", {root:"./public"});
 })
 router.get("/veto", (req, res) => {
   res.sendFile("veto.html", {root:"./public"});
-})*/
+})
 
 router.get("/logout", logout)
 
