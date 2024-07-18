@@ -12,10 +12,10 @@ router.get("/", loggedIn, (req, res) => {
   
 })
 
-router.get("/send", (req, res) => {
-  res.sendFile("mailSent.html", {root:"./public"});
+/*router.get("/send", (req, res) => {
+  res.sendFile("mailSent.html", {root:"./public"});(**not to be used**)
   
-})
+})*/
 
 router.get("/register", (req, res) => {
   res.sendFile("register.html", {root:"./public"});
