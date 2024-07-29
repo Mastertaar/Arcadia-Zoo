@@ -65,7 +65,7 @@ app.post('/send', (req, res) => {
       pass: process.env.APP_PASSWORD // naturally, replace both with your real credentials or an application-specific password
     },
     tls: {
-      rejectUnauthorized: false
+      rejectUnauthorized: true
     }
   });
   app.use(bodyParser.urlencoded({
