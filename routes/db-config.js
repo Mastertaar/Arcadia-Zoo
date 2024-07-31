@@ -7,7 +7,6 @@ const connection = sql.createConnection({
   password:process.env.PASSWORD,
   database:process.env.DATABASE,
   port: process.env.DB_PORT,
-
 })
 
 
@@ -28,7 +27,7 @@ connection.connect((err) => {
     console.log('db' + connection.state);
 })
 
-connection.end();
+
 
 
 module.exports = connection;
