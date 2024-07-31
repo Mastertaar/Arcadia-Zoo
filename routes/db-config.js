@@ -7,18 +7,18 @@ const connection = sql.createConnection({
   password:process.env.PASSWORD,
   database:process.env.DATABASE,
   port: process.env.DB_PORT,
-  jawsdb_url: process.env.JAWSDB_URL
+
 })
 
 
 
 
 
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+/*connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
   if (err) throw err;
 
   console.log('The solution is: ', rows[0].solution);
-});
+});*/
 
 
 connection.connect((err) => {
