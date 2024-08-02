@@ -18,13 +18,22 @@ connection.connect((err) => {
   }
     console.log('db' + connection.state);
 })
-
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+async function execute_q (q) {
+  try {
+      var results = await connection.query('SELECT 1 + 1 AS solution');
+      console.log(results[0].solution);
+      return results;
+  }
+  catch(err) {
+      throw err;
+  }
+}
+/*connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
   if (err) throw err;
 
   console.log('The solution is: ', rows[0].solution);
-});
+});*/
 
-connection.end(); 
+/*connection.end();*/
 
 module.exports = connection;
