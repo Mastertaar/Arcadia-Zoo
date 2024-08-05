@@ -104,4 +104,4 @@ app.post('/send', (req, res) => {
   
 });
 
-app.listen(process.env.PORT, () => console.log('app is running'));
+app.listen(PORT, () => console.log('app is running'));
