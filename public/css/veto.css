@@ -108,10 +108,12 @@ section{
   color: var(--main);
 }
 
+
+
 .header .navbar a{
   font-size: 1.7rem;
   color: var(--black);
-  margin: 0 1rem;
+  margin: 0 4rem;
 } 
 
 .header .navbar a:hover{
@@ -623,4 +625,9 @@ section{
   .home .content h3{
     font-size: 4rem;
   }
+
+  #menu-btn{
+    display: inline-block;
+  }
+
 }

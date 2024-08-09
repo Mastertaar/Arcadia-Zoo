@@ -107,6 +107,7 @@
   color: var(--main);
 }
 
+
 .header .navbar a{
   font-size: 1.2rem;
   color: var(--black);
@@ -127,6 +128,12 @@
 .header .icons div:hover{
   color: var(--main);
 }
+
+.menu-btn{
+  display: none;
+}
+
+
 
   /* home */
 
@@ -542,23 +549,69 @@
 }
 /* end */
 
+/* BURGER-MENU */
+
+.burger-menu{
+  display: none;
+  height: 0;
+  position: absolute;
+  right: 4.5rem;
+  top: 50px;
+  width: 100px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burger-menu.open{
+  height: auto;
+}
+
+.burger-menu li{
+  color: var(--white);
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-menu li:hover{
+  color: var(--main);
+}
+
+
+
 /* media-queries */
-@media(max-width: 991px){
+@media(max-width: 990px){
   html{
     font-size: 55%;
   }
-  .header{
+  header{
     padding: 2rem;
   }
   section{
     padding: 8rem 2rem;
   }
+ .navbar .links,
+ .burger-menu.open{
+    display: flex;
+  }
+  .menu-btn{
+    display: block;
+  }
+  .menu-btn i{
+    zoom: 200%;
+  }
 }
 
-@media(max-width: 768px){
+@media(max-width: 450px){
 
-  #menu-btn{
-    display: inline-block;
+  .menu-btn{
+  display: block;
   }
 
   .header .navbar{
@@ -594,13 +647,4 @@
 }
 
 
-@media(max-width: 450px){
-  html{
-    font-size: 50%;
-  }
-
-  .home .content h3{
-    font-size: 4rem;
-  }
-}
 </style>
