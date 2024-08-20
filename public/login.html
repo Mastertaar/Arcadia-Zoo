@@ -4,50 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/login.css">
   <title>Login Page</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Page de connexion</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Connexion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/register">S'inscrire</a>
-          </li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Page de connexion</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Connexion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">S'inscrire</a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-btn">
+          <i class="fa fa-bars"></i>
+        </div>
       </div>
+    </nav>
+    <div class="burger-menu">
+      <ul class="links">
+        <li class="nav-item"><a class="nav-link-active" href="/login">Connexion</a></li>
+        <li class="nav-item"><a class="nav-link" href="/register">S'inscrire</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
+      </ul>
     </div>
-  </nav>
-  <div class="container my-5">
-    <div class="card" style="width: 100%;">
-      <div class="card-body">
-        <h5 class="card-title">Fenêtre de connexion</h5>
-        <form onsubmit="return false;" id="form">
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" autocomplete="off" required>
-          </div>
-          <div class="mb-3">
-            <label for="password">Mot de passe</label>
-            <input type="password" class="form-control" id="password" autocomplete="off" required>
-          </div>
-          <div class="alert alert-danger" role="alert" id="error" style="display : none;"></div>
-          <div class="alert alert-success" role="alert" id="success" style="display : none;"></div>
-          <button type="submit" class="btn btn-primary">Se connecter</button>
-        </form>
+  </header>
+  <main>
+    <section class="container my-5">
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">Fenêtre de connexion</h5>
+          <form onsubmit="return false;" id="form">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+              <label for="password">Mot de passe</label>
+              <input type="password" class="form-control" id="password" autocomplete="off" required>
+            </div>
+            <div class="alert alert-danger" role="alert" id="error" style="display : none;"></div>
+            <div class="alert alert-success" role="alert" id="success" style="display : none;"></div>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </div>
-  <script src="js/login.js"></script>
+    </section>
+  </main>
+  <script src="./js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

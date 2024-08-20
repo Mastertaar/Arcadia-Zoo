@@ -11,7 +11,7 @@
           <li class="nav-item"><a class="nav-link" href="#animal">les animaux</a></li>
           <li class="nav-item"><a class="nav-link" href="#pricing">tarifs</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
-          <!--<li class="nav-item"><a class="nav-link" href="/veto">Se déconnecter</a></li>-->
+          <!--<li class="nav-item"><a class="nav-link" href="/veto">Vétérinaire</a></li>-->
           <%if (status == "loggedIn"){%>
             <li class="nav-item"><a class="nav-link" href="/veto">aile vétérinaire</a></li>
             <li class="nav-item"><a class="nav-link" href="/profil">Profil</a></li>
@@ -26,24 +26,24 @@
   </nav>
   <div class="menu-btn">
     <i class="fa fa-bars"></i>
-   </div>
+  </div>
   <div class="burger-menu">
     <ul class="links">
       <li class="nav-item"><a class="nav-link" href="#about">à propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
-        <li class="nav-item"><a class="nav-link" href="#animal">les animaux</a></li>
-        <li class="nav-item"><a class="nav-link" href="#pricing">tarifs</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
-        <!--<li class="nav-item"><a class="nav-link" href="/veto">Se déconnecter</a></li>-->
-        <%if (status == "loggedIn"){%>
-          <li class="nav-item"><a class="nav-link" href="/veto">aile vétérinaire</a></li>
-          <li class="nav-item"><a class="nav-link" href="/profil">Profil</a></li>
-          <li class="nav-item"><a class="nav-link" href="/logout">Se déconnecter</a></li>
-        <%}else{%>
-          <li class="nav-item"><a class="nav-link" href="/register">S'inscrire</a></li>
-          <li class="nav-item"><a class="nav-link" href="/login">Connexion</a></li>
-        <%}%>
-          <!--<div class="divider"></div> pour après éventuellement séparer les boutons et les liens-->
+      <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+      <li class="nav-item"><a class="nav-link" href="#animal">les animaux</a></li>
+      <li class="nav-item"><a class="nav-link" href="#pricing">tarifs</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
+      <!--<li class="nav-item"><a class="nav-link" href="/veto">Se déconnecter</a></li>-->
+      <%if (status == "loggedIn"){%>
+        <li class="nav-item"><a class="nav-link" href="/veto">Vétérinaire</a></li>
+        <li class="nav-item"><a class="nav-link" href="/profil">Profil</a></li>
+        <li class="nav-item"><a class="nav-link" href="/logout">Se déconnecter</a></li>
+      <%}else{%>
+        <li class="nav-item"><a class="nav-link" href="/register">S'inscrire</a></li>
+        <li class="nav-item"><a class="nav-link" href="/login">Connexion</a></li>
+      <%}%>
+        <!--<div class="divider"></div> pour après éventuellement séparer les boutons et les liens-->
     </ul>
   </div>
 </header>
@@ -55,8 +55,8 @@
 
   menuBtn.onclick = function() {
     burgerMenu.classList.toggle('open')
-    const isOpen = menuBtn.classList.contains('open')
-    menuBtnIcon.classList = isOpen ? 'fa fas-xmark' : 'fa fa-bars'
+    const isOpen = burgerMenu.classList.contains('open')
+    menuBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa fa-bars'
   }
 
 </script>
