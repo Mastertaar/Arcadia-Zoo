@@ -19,7 +19,7 @@
 }
 
 html{
-  font-size: 62.5%;
+  font-size: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
@@ -88,6 +88,7 @@ section{
 .header{
   position: fixed;
   top: 0; left: 0; right: 0;
+  height: 13%;
   z-index: 1000;
   background: var(--white);
   box-shadow: var(--box-shadow);
@@ -98,7 +99,7 @@ section{
 }
 
 .header .logo{
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bolder;
   color: var(--black);
   text-decoration: none;
@@ -109,31 +110,40 @@ section{
 }
 
 
-
 .header .navbar a{
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   color: var(--black);
-  margin: 0 4rem;
-} 
+  margin: 0 1rem;
+}
 
 .header .navbar a:hover{
   color: var(--main);
 }
 
-.header .icons div{
+/*.header .icons div{
   font-size: 2.5rem;
   margin-left: 1.7rem;
   cursor: pointer;
   color: var(--black);
-}
+}*/
 
 .header .icons div:hover{
   color: var(--main);
 }
 
-#menu-btn{
+.header .navbar-nav {
+  list-style-type: none;
+}
+
+.header .navbar-nav li{
+  display: inline-flex;
+}
+
+.menu-btn
+{
   display: none;
 }
+
 
 
 
@@ -198,7 +208,7 @@ section{
 }
 
 .about .box-container .image img{
-  width: auto;
+  width: 100%;
 }
 
 .about .content{
@@ -263,10 +273,6 @@ section{
   object-fit: cover;
 }
 
-.swiper-button-next,
-.swiper-button-prev{
-  color: var(--white);
-}
 
 
 /* end */
@@ -565,6 +571,46 @@ section{
 }
 /* end */
 
+/* BURGER-MENU */
+
+.burger-menu{
+  display: none;
+  height: 0;
+  position: absolute;
+  right: 4.5rem;
+  top: 50px;
+  width: 130px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burger-menu.open{
+  height: auto;
+}
+
+.burger-menu li{
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links .nav-link{
+  color: var(--white);
+}
+
+.links .nav-link:hover{
+  color: var(--main);
+}
+
+
+
+
 /* media-queries */
 @media(max-width: 991px){
   html{
@@ -576,11 +622,24 @@ section{
   section{
     padding: 8rem 2rem;
   }
+
+  .navbar .links,
+  .burger-menu.open{
+    display: flex;
+  }
+
+  .menu-btn{
+    display: block;
+  }
+  .menu-btn i{
+    zoom: 200%;
+  }
+
 }
 
 @media(max-width: 768px){
 
-  #menu-btn{
+  .menu-btn{
     display: inline-block;
   }
 
@@ -604,7 +663,7 @@ section{
   }
 
   .home{
-    background-position: left;
+    background-position: center;
   }
 
   .home .content h3{
@@ -626,8 +685,9 @@ section{
     font-size: 4rem;
   }
 
-  #menu-btn{
+  .menu-btn{
     display: inline-block;
   }
+
 
 }
