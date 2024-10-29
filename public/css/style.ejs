@@ -269,31 +269,31 @@
 
 /* end */
 
-/* animals */
+/* habitats */
 
-.animal .box-container{
+.habitat .box-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
 }
 
-.animal .box-container .box{
+.habitat .box-container .box{
   height: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.animal .box-container .box img{
+.habitat .box-container .box img{
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.animal .box-container .box:hover img{
+.habitat .box-container .box:hover img{
   transform: scale(1.1);
 }
 
-.animal .box-container .box .content{
+.habitat .box-container .box .content{
   text-align: center;
   position: absolute;
   bottom: 0;
@@ -303,7 +303,7 @@
   transition: 0.5 ease;
 }
 
-.animal .box-container .box:hover::after{
+.habitat .box-container .box:hover::after{
   content: '';
   position: absolute;
   top: 0; left: 0;
@@ -315,14 +315,14 @@
 }
 
 
-.animal .box-container .box .content h3{
+.habitat .box-container .box .content h3{
   text-align: center;
   font-size: 3rem;
   color: var(--white);
 }
 
 
-.animal .box-container .box:is(:hover, :focus-within) .content{
+.habitat .box-container .box:is(:hover, :focus-within) .content{
   transform: translateY(-20px);
 }
 

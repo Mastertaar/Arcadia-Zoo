@@ -147,6 +147,7 @@ section{
 
 
 
+
 /* home */
 
 .home{
@@ -577,9 +578,9 @@ section{
   display: none;
   height: 0;
   position: absolute;
-  right: 4.5rem;
-  top: 50px;
-  width: 130px;
+  right: 2rem;
+  top: 60px;
+  width: 140px;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
   border-radius: 10px;
@@ -596,12 +597,13 @@ section{
   font-size: 2rem;
   font-weight: 500;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .links .nav-link{
+  text-align: center;
   color: var(--white);
+  width: 150%;
+  padding: 0.5rem;
 }
 
 .links .nav-link:hover{
