@@ -29,4 +29,8 @@ le fchier pages.js où la fonction router est créée grâce à Express et perme
 
 app.js lie tous les fichiers du site entre elles et harmonise le fonctionnnement de l'appli.
 
+Deploiement sur Heroku : 
 
+Depuis la commande : 
+Heroku login
+Git push heroku main
