@@ -96,7 +96,7 @@ app.post('/send', (req, res) => {
     if (err) throw err 
 
   })
-  connection.end();
+  //connection.end();
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {

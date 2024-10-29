@@ -6,7 +6,7 @@ const login = async (req, res) => {
   const {role, email, password} = req.body;
   if(!role || !email || !password) return res.json ({
     status: "error", 
-    error: "Merci de rentrer votre rôle, email et mot de passe" });
+    error: "Merci de rentrer votre email et mot de passe" });
     else {
       db.query('SELECT * FROM users WHERE email = ? AND role = ?', [email], [role], async (Err, result) => {
         if(Err) throw Err;
