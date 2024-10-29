@@ -33,4 +33,4 @@ Deploiement sur Heroku :
 
 Depuis la commande : 
 Heroku login
-Git push heroku main
+puis Git push heroku main
