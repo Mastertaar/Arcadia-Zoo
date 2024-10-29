@@ -3,12 +3,12 @@ const db = require("../routes/db-config");
 const bcrypt = require("bcryptjs");
 
 const login = async (req, res) => {
-  const {email, password} = req.body;
-  if(!email || !password) return res.json ({
+  const {role, email, password} = req.body;
+  if(!role || !email || !password) return res.json ({
     status: "error", 
-    error: "Merci de rentrer votre email et mot de passe" });
+    error: "Merci de rentrer votre rôle, email et mot de passe" });
     else {
-      db.query('SELECT * FROM users WHERE email = ?', [email], async (Err, result) => {
+      db.query('SELECT * FROM users WHERE email = ? AND role = ?', [email], [role], async (Err, result) => {
         if(Err) throw Err;
         if (!result.length || !await bcrypt.compare(password, result[0].password)) return res.json({status: "error",
           error: "Email ou mot de passe incorrect"

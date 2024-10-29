@@ -6,7 +6,6 @@
   <title>Arcadia Zoo Web App</title>
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/veto.css">
 </head>
 <body>
@@ -16,34 +15,34 @@
     <a href="#" class="logo"> <i class="fas fa-paw"></i>
       Zoo Arcadia Vétérinaire
     </a>
-    <nav class="navbar">
-      <a href="/veto">accueil</a>
-      <a href="#about">à propos</a>
-      <a href="#vetcare">soins vétérinaires</a>
-      <a href="#vaccination">vaccinations</a>
-      <a href="#dentalcare">soins dentaires</a>
-      <a href="#medicines">médicaments</a>
+    <nav class="navbar navbar-expand-lg">
+      <div class="cointainer-fluid">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li><a href="/veto">accueil vétérinaire</a></li>
+            <li><a href="#about">à propos</a></li>
+            <li><a href="#vetcare">soins vétérinaires</a></li>
+            <li><a href="#vaccination">vaccinations</a></li>
+            <li><a href="#medicine">médicaments</a></li>
+          </ul>
+        </div>
+      </div>  
     </nav>
 
-    <div class="icons">
-      <div id="menu-btn" class="fas fa-bars"></div>
+
+    <div class="menu-btn">
+      <i class="fa fa-bars"></i>
     </div>
-
-  <!-- login form -->
-
-    <form action="" class="login-form">
-
-      <h3>login form</h3>
-
-      <input type="email" placeholder="Enter your email" class="box">
-      <input type="password" placeholder="Enter your password" class="box">
-      <div class="remember">
-        <input type="checkbox" name="" id="remember-me">
-        <label for="remember-me">remember me</label>
-      </div>
-      <a href="#" class="btn">login</a>
-
-    </form>
+    <div class="burger-menu">
+      <ul class="links">
+        <li><a class="nav-link" href="/veto">accueil vétérinaire</a></li>
+        <li><a class="nav-link" href="#about">à propos</a></li>
+        <li><a class="nav-link" href="#vetcare">soins vétérinaries</a></li>
+        <li><a class="nav-link" href="#vaccination">vaccinations</a></li>
+        <li><a class="nav-link" href="#medicine">médicaments</a></li>
+        <li><a class="nav-link" href="/logout">deconnexion</a></li>
+      </ul>
+    </div>
 
   </header>
 
@@ -214,7 +213,6 @@
   </section>
 
   <!-- end -->
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
- 
+  <script src="./js/veto.js"></script>
 </body>
 </html>

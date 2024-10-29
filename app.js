@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require ('./routes/db-config');
+const connection = require ('./routes/db-config');
 
 const app = express();
 const bodyParser = require('body-parser');
@@ -10,6 +10,7 @@ const nodemailer = require('nodemailer');
 const mysql = require('mysql');
 const PORT = process.env.PORT || 5000;
 app.use(cors());
+const authRole = require('./controllers/middlewares')
 
 app.use("/js", express.static(__dirname + "/public/js"));
 app.use("/css", express.static(__dirname + "/public/css"));
@@ -40,6 +41,13 @@ app.get('/#contact', (req, res) => {
   });
   app.locals.layout = false;
 });
+
+//Auth Role Middleware
+/*app.get("/public/veto", authRole(["vet", "admin"]), (req,res) => {
+  res.json({
+    next
+  })
+})*/
 
 
 
@@ -82,13 +90,13 @@ app.post('/send', (req, res) => {
     subject: 'Questions about Pitarque Productions!', // Subject line
     html: output // html body
   };
-  /*//sql values
-  const sql = "insert into people values(null, '" + req.body.name + "', '" + req.body.email + "', '" + req.body.phone + "', '" + req.body.message + "')"
+  //sql values
+  const sql = "insert into people (name, email, phone, message) values('" + req.body.name + "', '" + req.body.email + "', '" + req.body.phone + "', '" + req.body.message + "')"
   connection.query(sql, function (err) {
     if (err) throw err 
 
   })
-  connection.end();*/
+  connection.end();
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {

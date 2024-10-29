@@ -43,7 +43,22 @@
     <div class="card" style="width: 100%;">
       <div class="card-body">
         <h5 class="card-title">Formulaire d'inscription (réservé au personnel du zoo)</h5>
+        <br>
         <form onsubmit="return false;" id="form">
+          
+          <div class="mb-3">
+            <label for="role" class="form-label">rôle</label>
+            <br>
+            <select class="role" id="role" required>
+              <option selected disabled value="">Veuillez sélectionnner un rôle</option>
+              <option class="admin">Administrateur</option>
+              <option class="vet">Vétérinaire</option>
+              <option class="employee">Employé</option>
+            </select>
+            <div class="invalid-feedback">
+              Merci de sélectionner un rôle valide
+            </div>
+          </div>   
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" 
