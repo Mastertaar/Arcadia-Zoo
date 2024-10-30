@@ -1,6 +1,5 @@
 form.addEventListener("submit", () => {
   const register = {
-    /*role: role.value,*/
     email: email.value,
     password: password.value
   }

@@ -1,6 +1,5 @@
 form.addEventListener("submit", () => {
   const login = {
-    /*role: role.value,*/
     email: email.value,
     password: password.value
   }
