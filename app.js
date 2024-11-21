@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 
 app.use("/", require("./routes/pages"));
 app.use("/dashboard", require("./routes/customer"));
-app.use("/dashboard/addCustomer", require("./routes/pages"));
+
 
 
 app.use("/api", require ("./controllers/auth"));
