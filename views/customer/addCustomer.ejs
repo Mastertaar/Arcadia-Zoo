@@ -1,0 +1,75 @@
+<section class="dashboard" id="dashboard">
+
+  <div class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">add a user</h1>
+  
+    <div class="btn-toolbar">
+      <div class="btn-group me-2">
+       <button class="btn btn-sm btn-outline-secondary">?</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col py-3">
+    <div class="row">
+
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb" >
+            <li class="breadcrumb-item"><a href="/dashboard">dashboard</a></li>
+            <li class="breadcrumb-item active">new customer</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="col text-end fw-lighter">
+        <b>userId</b>
+      </div>
+
+    </div>
+  </div>
+
+  <form action="/add" method="POST">
+
+    <div class="row form-group mb-4">
+      <div class="col">
+        <label for="firstName">first name</label>
+        <input type="text" class="form-control" id="firstName" value="" placeholder="first name" 
+        required>
+      </div>
+
+      <div class="col">
+        <label for="lastName">last name</label>
+        <input type="text" class="form-control" id="lastName" value="" placeholder="last name" 
+        required>
+      </div>
+    </div>
+
+    <div class="row form-group mb-4">
+      <div class="col">
+        <label for="tel">telephone</label>
+        <input type="text" class="form-control" id="tel" value="" placeholder="telephone" 
+        required>
+      </div>
+
+      <div class="col">
+        <label for="email">email</label>
+        <input type="text" class="form-control" id="email" value="" placeholder="email" 
+        required>
+      </div>
+    </div>
+
+    <div class="form-group mb-4">
+        <label for="details">user details</label>
+        <textarea name="details" class="form-control" id="details" cols="30" rows="10" placeholder="user details"></textarea>
+    </div>
+
+    <div class="form-group mb-4">
+      <button type="submit" class="btn btn-primary">add a user</button>
+    </div>
+      
+
+  </form>
+
+</section>

@@ -3,6 +3,7 @@ const connection = require ('./routes/db-config');
 
 const app = express();
 const bodyParser = require('body-parser');
+const expressLayout = require('express-ejs-layouts')
 const cookie = require('cookie-parser')
 const cors = require('cors');
 const path = require('path');
@@ -10,30 +11,33 @@ const nodemailer = require('nodemailer');
 const mysql = require('mysql');
 const PORT = process.env.PORT || 5000;
 app.use(cors());
-const authRole = require('./controllers/middlewares')
+const authRole = require('./controllers/middlewares');
+const { Script } = require('vm');
+const router = require('./controllers/auth');
 
-app.use("/js", express.static(__dirname + "/public/js"));
-app.use("/css", express.static(__dirname + "/public/css"));
-app.use("/images", express.static(__dirname + "/public/images"));
-app.use("/imagesVet", express.static(__dirname + "/public/imagesVet"));
-
-
-app.set("view engine", "ejs");
-app.set("views", "./views");
-app.use(cookie());
+app.use(express.urlencoded ({ extended: true}));
 app.use(express.json());
+app.use(cookie());
+
+//Static files
+app.use(express.static('public'));
+
+//Templating Engine
+app.use(expressLayout);
+app.set("layout", "./layouts/main");
+app.set('view engine', 'ejs');
 
 
 
 app.use("/", require("./routes/pages"));
+app.use("/dashboard", require("./routes/customer"));
+app.use("/dashboard/addCustomer", require("./routes/pages"));
+
 
 app.use("/api", require ("./controllers/auth"));
 
-// Body Parser Middleware
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
-app.use(bodyParser.json());
+
+
 
 app.get('/#contact', (req, res) => {
   res.render('contact', {
