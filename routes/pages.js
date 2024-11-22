@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const loggedIn = require ("../controllers/loggedIn");
 const logout = require("../controllers/logout");
-//const customerController = require('../controllers/customerController');
+
 
 
 

@@ -30,7 +30,7 @@ app.set('view engine', 'ejs');
 
 
 app.use("/", require("./routes/pages"));
-app.use("/dashboard", require("./routes/customer"));
+
 
 
 
