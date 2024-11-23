@@ -17,6 +17,7 @@
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
     "express-ejs-layouts": "^2.5.1",
     "express-flash-messages": "^0.1.1",
     "express-session": "^1.18.1",
@@ -24,6 +25,7 @@
     "method-override": "^3.0.0",
     "mongoose": "^8.8.0",
     "mysql": "^2.18.1",
+    "mysql2": "^3.11.4",
     "nodemailer": "^6.9.13",
     "path": "^0.12.7"
   },

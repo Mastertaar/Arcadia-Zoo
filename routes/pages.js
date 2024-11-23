@@ -54,7 +54,7 @@ router.get('/dashboard/addCustomer', loggedIn, (req,res) => {
 )
 
 //Post routes
-router.post("addCustomer", loggedIn, (req,res) => {
+/*router.post("/dashboard/add", loggedIn, (req,res) => {
   
   console.log(req.body);
   
@@ -70,8 +70,7 @@ router.post("addCustomer", loggedIn, (req,res) => {
   }
 }
 
-);
-
+);*/
 
 
 //Static files routes

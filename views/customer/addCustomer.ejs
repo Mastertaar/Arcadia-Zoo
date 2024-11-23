@@ -18,7 +18,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb" >
             <li class="breadcrumb-item"><a href="/dashboard">dashboard</a></li>
-            <li class="breadcrumb-item active">new customer</a></li>
+            <li class="breadcrumb-item active">nouvel utilisateur</a></li>
           </ol>
         </nav>
       </div>
@@ -30,43 +30,52 @@
     </div>
   </div>
 
-  <form action="/add" method="POST">
+  <form action="add" onsubmit="return false;" method="post">
 
     <div class="row form-group mb-4">
       <div class="col">
-        <label for="firstName">first name</label>
-        <input type="text" class="form-control" id="firstName" value="" placeholder="first name" 
+        <label for="firstName">prénom</label>
+        <input name="firstName" type="text" class="form-control" id="firstName" value="" placeholder="prénom" 
         required>
       </div>
 
       <div class="col">
-        <label for="lastName">last name</label>
-        <input type="text" class="form-control" id="lastName" value="" placeholder="last name" 
+        <label for="lastName">nom de famille</label>
+        <input name="lastName" type="text" class="form-control" id="lastName" value="" placeholder="nom de famille" 
         required>
       </div>
     </div>
 
     <div class="row form-group mb-4">
       <div class="col">
-        <label for="tel">telephone</label>
-        <input type="text" class="form-control" id="tel" value="" placeholder="telephone" 
-        required>
+        <label for="tel">téléphone</label>
+        <input name="tel" type="text" class="form-control" id="tel" value="" placeholder="telephone" 
+        >
       </div>
 
       <div class="col">
         <label for="email">email</label>
-        <input type="text" class="form-control" id="email" value="" placeholder="email" 
+        <input name="email" type="text" class="form-control" id="email" value="" placeholder="email"
+        required>
+      </div>
+    </div>
+
+    <div class="row form-group mb-4">
+      <div class="col">
+        <label for="password">mot de passe</label>
+        <input name="password" type="password" class="form-control" id="password" value="" placeholder="mot de passe" 
+        required>
+      </div>
+
+      <div class="col">
+        <label for="confirm_password">mot de passe</label>
+        <input name="confirm_password" type="password" class="form-control" id="confirm_password" value="" placeholder="confirmer mot de passe"
         required>
       </div>
     </div>
 
     <div class="form-group mb-4">
-        <label for="details">user details</label>
-        <textarea name="details" class="form-control" id="details" cols="30" rows="10" placeholder="user details"></textarea>
-    </div>
-
-    <div class="form-group mb-4">
-      <button type="submit" class="btn btn-primary">add a user</button>
+      <button type="submit" class="btn btn-sm btn-outline-secondary">ajouter un utilisateur</button>
     </div>
       
 

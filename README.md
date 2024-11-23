@@ -17,7 +17,7 @@ Les fonctions app.use sont installés et me redirigent vers le css; les images, 
 app.set("view engine", "ejs") permet d'intégrer la technologie EJS
 
 Le fichier de configuration .env me permet de stocker et d'accéder aux paramètres d'accès a la base de données>
-le dossier conrolllers est créé et me pemret d'installer là toutes les fonctions en back-end du site:>
+le dossier conrollers est créé et me pemret d'installer là toutes les fonctions en back-end du site:>
 -Authentification
 -inscription
 -connecté
@@ -28,6 +28,8 @@ Le dossier routes est créé et me permet d'installer là la fonctionnalité de 
 le fchier pages.js où la fonction router est créée grâce à Express et permet de lier et d'intégrer toutes les pages du site web + affichage modifi>é si l'user est connecté ou non>
 
 app.js lie tous les fichiers du site entre elles et harmonise le fonctionnnement de l'appli.
+
+Packages installed : Mysql2, express, express-async-errors, body-parser, nodejs, transporter and more...
 
 Deploiement sur Heroku : 
 

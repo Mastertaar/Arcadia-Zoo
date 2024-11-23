@@ -1,6 +1,6 @@
 const express = require('express');
 const connection = require ('./routes/db-config');
-
+require('express-async-errors')
 const app = express();
 const bodyParser = require('body-parser');
 const expressLayout = require('express-ejs-layouts')
@@ -8,7 +8,7 @@ const cookie = require('cookie-parser')
 const cors = require('cors');
 const path = require('path');
 const nodemailer = require('nodemailer');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const PORT = process.env.PORT || 5000;
 app.use(cors());
 const authRole = require('./controllers/middlewares');
@@ -36,7 +36,10 @@ app.use("/", require("./routes/pages"));
 
 app.use("/api", require ("./controllers/auth"));
 
-
+app.use((err,req,res,next) => {
+  console.log(err)
+  res.status(err.status || 500).send('Something went wrong!')
+})
 
 
 app.get('/#contact', (req, res) => {
